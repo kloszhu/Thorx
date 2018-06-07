@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoTest", "MongoTest\Mong
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thorx.WebApp", "Thorx.WebApp\Thorx.WebApp.csproj", "{171626CD-16C2-4F76-95F1-AE6DC4A3D088}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebExt", "WebExt", "{316D3BEA-C297-4352-9FB0-A14A560140D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thorx.Web.Extention", "Thorx.Web.Extention\Thorx.Web.Extention.csproj", "{F8816979-9907-4045-B3E0-3520B80A3551}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{171626CD-16C2-4F76-95F1-AE6DC4A3D088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{171626CD-16C2-4F76-95F1-AE6DC4A3D088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{171626CD-16C2-4F76-95F1-AE6DC4A3D088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8816979-9907-4045-B3E0-3520B80A3551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8816979-9907-4045-B3E0-3520B80A3551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8816979-9907-4045-B3E0-3520B80A3551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8816979-9907-4045-B3E0-3520B80A3551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FD2175FB-AA81-4D7F-ACFF-24B34001A2AB} = {F70A2BAE-B9E0-4631-B978-48D65EB25E8D}
 		{B581748C-D9AE-450A-B933-4A3FB3F8C7EC} = {F70A2BAE-B9E0-4631-B978-48D65EB25E8D}
+		{F8816979-9907-4045-B3E0-3520B80A3551} = {316D3BEA-C297-4352-9FB0-A14A560140D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93546100-3260-4648-9AF0-43A1AE4B5DBB}
