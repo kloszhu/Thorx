@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Thorx.MongoResponsitory;
 using Thorx.MongoToolkit;
 namespace MongoTest
 {
@@ -24,12 +25,12 @@ namespace MongoTest
             Door door = new Door();
             door.Code = 1;
             door.Name = "门1";
-            new  Responsitory<Door>().Repository.Insert(door);
+            AbstractResponsitory<Door>.Responsitory.Insert(door);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           var count=  new Responsitory<Door>().Repository.GetAll().Count();
+           var count= AbstractResponsitory<Door>.Responsitory.GetAll().Count();
             MessageBox.Show(count.ToString());
         }
 
@@ -42,21 +43,21 @@ namespace MongoTest
             city.WhitchDoor.Create();
             city.WhitchDoor.Name = "喜盈门范城";
             city.WhitchDoor.Code =2;
-            new Responsitory<City>().Repository.Insert(city);
+            new ToolkitResponsitory<City>().Repository.Insert(city);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
          
-            var count = new Responsitory<City>().Repository.FindAll(a=>a.WhitchDoor.Id== "6390e2fe-f028-44b0-827c-2e7ed3e40852").Count();
+            var count = new ToolkitResponsitory<City>().Repository.FindAll(a=>a.WhitchDoor.Id==new Guid( "6390e2fe-f028-44b0-827c-2e7ed3e40852")).Count();
             MessageBox.Show(count.ToString());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var count = new Responsitory<City>().Repository.Find(a => a.WhitchDoor.Id == "6390e2fe-f028-44b0-827c-2e7ed3e40852");
+            var count = new ToolkitResponsitory<City>().Repository.Find(a => a.WhitchDoor.Id ==new Guid( "6390e2fe-f028-44b0-827c-2e7ed3e40852"));
             count.WhitchDoor.Name = "旷真";
-            new Responsitory<City>().Repository.Update(count);
+            new ToolkitResponsitory<City>().Repository.Update(count);
             MessageBox.Show(count.ToString());
         }
 
@@ -90,7 +91,7 @@ namespace MongoTest
             Piano piano = new Piano();
             piano.Name = "菊花台";
             piano.Player = "周杰伦";
-            new Responsitory<Piano,Guid?>().Repository.Insert(piano);
+            new ToolkitResponsitory<Piano,Guid?>().Repository.Insert(piano);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -98,13 +99,12 @@ namespace MongoTest
             Piano piano = new Piano();
             piano.Name = "菊花台1";
             piano.Player = "周杰伦";
-          var data=   new Responsitory<Piano, Guid?>().Repository.Insert(piano);
+          var data=   new ToolkitResponsitory<Piano, Guid?>().Repository.Insert(piano);
             List<Piano> pianos = new List<Piano>();
             var time1= TimeCostTest(() => {
                 pianos = GetPianos();
             });
             richTextBox1.Text += time1.Seconds+"\n";
-
             MessageBox.Show("11");
         }
 

@@ -104,6 +104,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Thorx.MongoResponsitory\Thorx.MongoResponsitory.csproj">
+      <Project>{fd2175fb-aa81-4d7f-acff-24b34001a2ab}</Project>
+      <Name>Thorx.MongoResponsitory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Thorx.MongoToolkit\Thorx.MongoToolkit.csproj">
       <Project>{b581748c-d9ae-450a-b933-4a3fb3f8c7ec}</Project>
       <Name>Thorx.MongoToolkit</Name>

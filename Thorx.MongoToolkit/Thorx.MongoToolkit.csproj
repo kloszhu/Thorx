@@ -62,16 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityObjectID.cs" />
-    <Compile Include="IMongoRepository.cs" />
+    <Compile Include="IMongoToolkitRepository.cs" />
     <Compile Include="ISpecification.cs" />
-    <Compile Include="MongoRepository.cs" />
+    <Compile Include="MongoToolkitRepository.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Responsitory.cs" />
+    <Compile Include="ToolkitResponsitory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Compile Include="Responsitory.T.cs" />
+    <Compile Include="ToolkitResponsitory.T.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

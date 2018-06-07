@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Thorx.MongoToolkit
 {
-    public  class Responsitory<T> where T: class,IEntity<string>
+    public  class ToolkitResponsitory<T> where T: class,IEntity<string>
     {
-        public Responsitory()
+        public ToolkitResponsitory()
         {
-            Repository = new MongoRepository<T, string>();
+            Repository = new MongoToolkitRepository<T, string>();
         }
         public IEntity<ObjectId> GetEntity { get; set; }
-        public  IMongoRepository<T, string> Repository { get; set; }
+        public  IMongoToolkitRepository<T, string> Repository { get; set; }
 
     }
 }

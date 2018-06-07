@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace Thorx.MongoToolkit
 {
-    public class MongoRepository<TEntity, TIdentifier> : IMongoRepository<TEntity, TIdentifier> where TEntity : class, IEntity<TIdentifier>
+    public class MongoToolkitRepository<TEntity, TIdentifier> : IMongoToolkitRepository<TEntity, TIdentifier> where TEntity : class, IEntity<TIdentifier>
     {
         private readonly IMongoDatabase database;
 
-        public MongoRepository()
+        public MongoToolkitRepository()
         {
-            this.database = new MongoClient(ConfigurationManager.AppSettings["MongoDatabaseConnstr"]).GetDatabase(ConfigurationManager.AppSettings["MongoDatabase"]);
+            this.database = new MongoClient(ConfigurationManager.AppSettings["MongoDatabaseConnstring"]).GetDatabase(ConfigurationManager.AppSettings["MongoDatabase"]);
         }
 
         public TEntity Get(TIdentifier id)

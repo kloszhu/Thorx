@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Thorx.MongoResponsitory;
 using Thorx.MongoToolkit;
 namespace MongoTest.model
 {
-    public class Door: EntityGuidID<string>
+    public class Door: BaseGuidModel
     {
  
         [BsonElement("code")]

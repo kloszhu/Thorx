@@ -5,7 +5,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 namespace Thorx.MongoToolkit
 {
-    public interface IMongoRepository<TEntity, TIdentifier> where TEntity : class, IEntity<TIdentifier>
+    public interface IMongoToolkitRepository<TEntity, TIdentifier> where TEntity : class, IEntity<TIdentifier>
     {
         void Delete(TEntity entity);
         void Delete(TIdentifier id);
